@@ -32,9 +32,15 @@ the `item` is just `array[i]`
 
 ## :hover on links
 
-for scale() to work on :hover links it needs to have a display:inline-block.
+For `scale()` to work on `:hover` links it needs to have a `display:inline-block.`
 
 ## hiding elements
 
-display:none hides the element and completely removes it, like position:absolute.
-visibility:hidden hides the element, but keeps the space reserved for it.
+`display:none` hides the element and completely removes it, like `position:absolute`.
+`visibility:hidden` hides the element, but keeps the space reserved for it.
+
+## responsive width
+
+Set `width: 100%` and then `max-width: ??` to get a responsive width of a container.
+When it can fit, it will be the `max-width: ??` wide,
+and when the screen starts shrinking it will shrink with it.
