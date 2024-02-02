@@ -29,3 +29,12 @@ myForEach(myArry, (item) => {
 })
 ```
 the `item` is just `array[i]`
+
+## :hover on links
+
+for scale() to work on :hover links it needs to have a display:inline-block.
+
+## hiding elements
+
+display:none hides the element and completely removes it, like position:absolute.
+visibility:hidden hides the element, but keeps the space reserved for it.
