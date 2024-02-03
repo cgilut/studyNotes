@@ -44,3 +44,12 @@ For `scale()` to work on `:hover` links it needs to have a `display:inline-block
 Set `width: 100%` and then `max-width: ??` to get a responsive width of a container.
 When it can fit, it will be the `max-width: ??` wide,
 and when the screen starts shrinking it will shrink with it.
+
+## responsive height
+
+A container inside a parent container that had `display:flex` and 
+`flex-direction:column` properties didn't extend all the way down unless it had a 
+`height:100%` property. However, with that property the contents also overflowed out
+ of the container when viewing the website on devices with smaller hight. 
+Removing `height:100%` and adding `flex: 1` solved the problem. 
+It ensured the container took all the available space of its parent flex container.
