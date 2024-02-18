@@ -82,3 +82,30 @@ Here is an example:
    - %<(113,trunc): Another field width specifier, specifying a width of 113 characters.
 
    - %s: This shows the commit subject.
+
+## Event objects
+
+When an event happens (mouse clicks, button presses, etc) the event is saved into an object, called the event object. All the info about this event is then
+passed into a callback function that you specify in the `addEventListener`.
+
+The information about the even goes as the 2nd parameter FUNCTION:
+
+`addEventListener( EVENT , FUNCTION )`
+
+That information can later be used when executing the function. In the `addEventlistener` the function should be without the parenthesis `()`, because we are **executing it**. 
+The actual function itself should have parenthesis with some kind of variable. It can be anything, but the standard practice is to call it `e`, or `event`.
+Something like this:
+
+```javascript 
+function functionName(e) {
+  if (e.target.checked) {
+  // some code
+  } else {
+  // some code
+  }
+}
+
+checkBox.addEventListener('change', functionName)
+```
+
+We have a checkbox, and we are listening to an event. In this case its the box getting checked via `change`. The information about the event is passed to the function `functionName`. The `e` here is a placeholder for that information. Inside the function we look at the `target` parameter, and if its `checked` some code is executed. For example it could be a switch for dark mode, or a different language.  
