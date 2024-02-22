@@ -45,6 +45,23 @@ Set `width: 100%` and then `max-width: ??` to get a responsive width of a contai
 When it can fit, it will be the `max-width: ??` wide,
 and when the screen starts shrinking it will shrink with it.
 
+## Stretch body height across the screen
+
+In order to have body cover the whole height of the screen instead of using `100vh` we will use 100%
+
+```css
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+```
+
+without the `box-sizing` the screen will have a scroll to the bottom
+
 ## Responsive height
 
 A container inside a parent container that had `display:flex` and 
