@@ -11,7 +11,7 @@ Writing down what I have learnt so far. Trying to explain concepts in human lang
 
 ## Callback function
 
-> A callback function is a function that is used as a parameter for another function  
+A callback function is a function that is used as a parameter for another function  
 And that is it! Why does it deserve it's own special name?
 
 It can be performed using anonymous arrow function:
