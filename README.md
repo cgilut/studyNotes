@@ -126,3 +126,27 @@ checkBox.addEventListener('change', functionName)
 ```
 
 We have a checkbox, and we are listening to an event. In this case its the box getting checked via `change`. The information about the event is passed to the function `functionName`. The `e` here is a placeholder for that information. Inside the function we look at the `target` parameter, and if its `checked` some code is executed. For example it could be a switch for dark mode, or a different language.  
+
+## Center a div with a menu on the side
+
+We have a div right in the middle of the screen, and we want to keep it there. On the left we have some buttons arranged in a 
+`flex-direction: column`. As the width of the screen shrinks, we want to keep the size of both the middle div and the button div, 
+while shrinking the margin on the left and right. 
+
+The trick was to set the parent container with the following parameters:
+
+```css
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+```
+
+First of all, `max-width` can be set as required. Our middle div is 500px wide, buttons are 200px. That means if we want to have a gap of 100px between them we need a max width of 1100px.
+When the screen width starts shrinking, the first thing to shrink is the `margin: 0 auto`. The width of both divs and the gap stays the same. 
+
+Later on with a `@media (max-width: )` query we can reduce gap, the size of the middle div and the `flex-direction: column-reverse;`.
